@@ -1,0 +1,11 @@
+[Unit]
+Description=Employee_App_Service
+
+[Service]
+User=root
+WorkingDirectory=/opt/employee/
+ExecStart=java -jar employee.jar
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

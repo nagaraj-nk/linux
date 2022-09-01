@@ -1,0 +1,13 @@
+#!/bin/bash
+
+[Unit]
+Description=Employee_Webhook_App_Service
+
+[Service]
+User=root
+WorkingDirectory=/opt/employee/scripts
+ExecStart=/bin/bash svc-webhook.sh
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
