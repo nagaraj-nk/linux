@@ -52,7 +52,7 @@ cat /root/.ssh/id_rsa.pub
 echo "--------------------------------------"
 
 echo sending SSH Key to github
-curl -X POST --data "{\"title\":\"ec2_prod_employee\",\"key\":\"`cat /root/.ssh/id_rsa.pub`\"}" -H "Accept: application/vnd.github+json" -H "Content-type: application/json" -H "Authorization: token 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" https://api.github.com/user/keys
+curl -X POST --data "{\"title\":\"ec2_prod_employee\",\"key\":\"`cat /root/.ssh/id_rsa.pub`\"}" -H "Accept: application/vnd.github+json" -H "Content-type: application/json" -H "Authorization: token TOKEN" https://api.github.com/user/keys
 echo "------------------------------"
 
 echo cloning code
